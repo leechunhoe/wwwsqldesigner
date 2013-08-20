@@ -16,6 +16,28 @@
 	<script type="text/javascript" src="js/oz.js"></script>
 	<script type="text/javascript" src="js/config.js"></script>
 	<script type="text/javascript" src="js/wwwsqldesigner.js"></script>
+		<script>
+	window.onkeydown = checkKey;
+
+	function checkKey(e) {
+
+
+
+		if (e.ctrlKey && e.shiftKey && e.keyCode == 83) // Ctrl + Shift + S
+			document.getElementById("saveload").click();
+						
+						else if (e.altKey && e.keyCode == 84) // Alt + T
+						document.getElementById("addtable").click();	
+					else if (e.altKey && e.keyCode == 82) // Alt + R
+						document.getElementById("addrow").click();	
+					else if (e.altKey && e.keyCode == 89) // Alt + Y
+						document.getElementById("editrow").click();	
+					else if (e.altKey && e.keyCode == 65) // Alt + A
+						document.getElementById("aligntables").click();	
+					else if (e.altKey && e.keyCode == 65) // Alt + Delete
+						document.getElementById("removerow").click();	
+				}
+										</script>
 </head>
 
 <body>
